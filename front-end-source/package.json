@@ -9,8 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tensorflow/tfjs-core": "3.3.0",
+    "handtrackjs": "^0.1.5",
+    "seedrandom": "~2.4.3",
     "vite-plugin-eslint": "^1.8.1",
-    "vue": "^3.2.41"
+    "vue": "^3.2.41",
+    "webpack": "^5.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
