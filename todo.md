@@ -1,6 +1,6 @@
 # TODO
 
--   [ ] ### 开启 ESlint
+-   [x] ### 开启 ESlint
 
 -   [ ] ### 核心 point 页面设计
 
