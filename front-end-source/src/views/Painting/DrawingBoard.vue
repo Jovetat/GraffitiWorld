@@ -1,23 +1,17 @@
 <template>
-  <span>画板</span>
-  <img ref="imgRef" />
+  <MirrorShows />
 </template>
 <script>
-import { handInit } from '@/hooks/useHandTrack'
-import { defineComponent, onMounted, ref } from 'vue'
+import MirrorShows from './MirrorShows.vue'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'DrawingBoard',
+  components: { MirrorShows },
   setup() {
-    const imgRef = ref(null)
-
-    onMounted(() => {
-      // handInit(imgRef.value)
-    })
-
-    return {
-      imgRef,
-    }
+    return {}
   },
 })
 </script>
+
+<style scoped></style>

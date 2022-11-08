@@ -2,7 +2,7 @@
 import * as handTrack from 'handtrackjs'
 
 const defaultParams = {
-  flipHorizontal: true, // 翻转水平
+  flipHorizontal: false, // 翻转水平
   outputStride: 16, // 输出步幅
   imageScaleFactor: 1, // 图像缩放因子
   maxNumBoxes: 20, // 最大数量框
@@ -14,11 +14,13 @@ const defaultParams = {
   fontSize: 17,
 }
 
-export const handInit = async ref => {
+export const handInit = async (canvasRef, videoRef) => {
+  handTrack.startVideo(videoRef)
   const model = await handTrack.load(defaultParams)
-  model.dispose() // 使用gpu处理模型数据
+  // model.dispose() // 使用gpu处理模型数据
   console.log('model准备完成')
-  const predictions = await model.detect(ref)
+  const predictions = await model.detect(canvasRef)
   console.log('predictions准备完成')
+  console.log(model, predictions)
   return { model, predictions }
 }
