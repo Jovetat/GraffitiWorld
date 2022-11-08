@@ -8,6 +8,7 @@ import DrawingBoard from './DrawingBoard.vue'
 
 export default defineComponent({
   name: 'HomePage',
+  components: { DrawingBoard },
   setup() {
     return {}
   },

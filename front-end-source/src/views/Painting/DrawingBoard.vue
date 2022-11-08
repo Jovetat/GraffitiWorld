@@ -1,4 +1,5 @@
 <template>
+  <span>画板</span>
   <img ref="imgRef" />
 </template>
 <script>

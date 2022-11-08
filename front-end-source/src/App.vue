@@ -1,9 +1,7 @@
 <template>
-  <HomePage />
+  <router-view />
 </template>
 
-<script setup>
-import HomePage from '@/views/Painting/HomePage.vue'
-</script>
+<script setup></script>
 
 <style scoped></style>
