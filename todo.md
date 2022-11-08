@@ -12,4 +12,4 @@
 
     https://github.com/victordibia/handtrack.js
 
-尝试通过位置控制鼠标
+-   [ ] ### 配置vue router，构建框架

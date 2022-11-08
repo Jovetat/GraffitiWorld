@@ -1,9 +1,9 @@
 <template>
-  <DrawingBoard />
+  <HomePage />
 </template>
 
 <script setup>
-import DrawingBoard from './views/DrawingBoard.vue'
+import HomePage from '@/views/Painting/HomePage.vue'
 </script>
 
 <style scoped></style>
