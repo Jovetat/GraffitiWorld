@@ -15,4 +15,17 @@ export default defineConfig({
       '@': resolve(__dirname, './src'),
     },
   },
+  css: {
+    preprocessorOptions: {
+      less: {
+        javascriptEnabled: true,
+        modifyVars: {
+          'primary-color': '#297373',
+          'text-color': '#39393A',
+          'layout-body-background': '#E6E6E6',
+          'layout-sider-background-light': '#FF8552',
+        },
+      },
+    },
+  },
 })
