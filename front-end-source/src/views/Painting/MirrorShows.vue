@@ -1,11 +1,13 @@
 <template>
   <div class="mirror">
+    <video ref="videoRef" autoplay="autoplay" />
     <canvas ref="canvasRef" />
-    <video ref="videoRef"></video>
+    <a-button @click="startVideo">开始</a-button>
+    <button @click="stopVideo">关闭</button>
   </div>
 </template>
 <script>
-import { handInit } from '@/hooks/useHandTrack'
+import { handInit, startVideo, stopVideo } from '@/hooks/useHandTrack'
 import { defineComponent, onMounted, ref } from 'vue'
 
 export default defineComponent({
@@ -21,6 +23,8 @@ export default defineComponent({
     return {
       canvasRef,
       videoRef,
+      startVideo,
+      stopVideo,
     }
   },
 })
@@ -28,14 +32,15 @@ export default defineComponent({
 
 <style lang="less" scoped>
 .mirror {
-  width: 270px;
-  height: 200px;
+  width: 351px; // w27:h20
+  height: 260px;
   background-color: black;
   canvas {
     width: 100%;
     height: 100%;
   }
   video {
+    display: none;
     width: 100%;
     height: 100%;
   }

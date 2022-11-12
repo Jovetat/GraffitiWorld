@@ -1,5 +1,4 @@
 <template>
-  <span>home</span>
   <DrawingBoard />
 </template>
 <script>
