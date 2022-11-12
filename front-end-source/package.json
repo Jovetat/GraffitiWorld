@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tensorflow/tfjs-core": "3.3.0",
+    "ant-design-vue": "^3.2.15",
     "handtrackjs": "^0.1.5",
     "less": "^4.1.3",
     "seedrandom": "~2.4.3",
