@@ -1,5 +1,6 @@
 // 关于 handTrack 初始化
 import * as handTrack from 'handtrackjs'
+import { message } from 'ant-design-vue'
 
 const defaultParams = {
   flipHorizontal: true, // 翻转水平
@@ -19,22 +20,21 @@ let canvasRef = null
 let videoRef = null
 let isVideo = false
 
-export const handInit = async (canvas, video) => {
+export const handInit = async (canvas, video, callback) => {
   canvasRef = canvas
   videoRef = video
   model = await handTrack.load(defaultParams)
-  console.log('model准备完成')
+  callback && callback()
 }
 
-export const startVideo = async () => {
-  console.log('start')
+export const startVideo = async callback => {
   const status = await handTrack.startVideo(videoRef)
   if (status) {
     isVideo = true
-    console.log('开始监测', status)
     runDetection()
+    callback && callback()
   } else {
-    console.log('请启用视频')
+    message.warning('请开启摄像头权限')
   }
 }
 

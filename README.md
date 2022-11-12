@@ -12,20 +12,16 @@
 
 ### 待完成
 
--   [ ]  核心 涂鸦 页面设计
-
--   [ ] 引入核心手势识别库
-
-    https://victordibia.com/handtrack.js/#/
-
-    https://www.npmjs.com/package/handtrackjs
-
-    https://github.com/victordibia/handtrack.js
+-   [ ] 核心 涂鸦 页面设计
+-   [ ] 画板demo
+-   [ ] 工具栏、导航栏设计
+-   [ ] 捕捉到的数据如何通信（pinia？vuex？watch）
 
 ### 已完成
 
 -   开启 ESlint
 -   配置vue router，构建框架
+-   引入核心手势识别库
 
 ### 预计完成功能
 
